@@ -6,7 +6,7 @@ da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 */
 
-let bici = [
+const bici = [
   {
     'nome': 'biciUno',
     'peso': 15
@@ -30,4 +30,4 @@ for(let i=0; i<bici.length; i++){
   console.log(biciLeggera);
 }
 
-document.write('nome bici: ' + biciLeggera.nome + '<br>peso: ' + biciLeggera.peso);
+document.write(`Nome Bici: ${biciLeggera.nome} <br>Peso: ${biciLeggera.peso}`);

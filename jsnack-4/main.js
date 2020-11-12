@@ -9,10 +9,10 @@ Nome sarà l’unica proprietà da compilare, le altre
 saranno tutte settate a 0.
 */
 
-let teams =[];
+const teams =[];
 
 for(let i = 0; i < 4; i++){
-  let newTeam = {
+  const newTeam = {
     'nome': prompt('inserisci il nome della squadra numero ' + (i+1)),
     'puntiFatti': 0,
     'falliSubiti': 0
@@ -24,9 +24,9 @@ for(let i = 0; i < 4; i++){
 for(let i = 0; i < teams.length; i++){
   document.getElementById('snack4a').innerHTML += '<h2>Squadra ' + (i+1) + '</h2>';
 
-  for(key in teams[i]){
-    document.getElementById('snack4a').innerHTML += key + ': ' + teams[i][key] + '<br>';
-  }
+  document.getElementById('snack4a').innerHTML += `Nome: ${teams[i].nome}<br>`;
+  document.getElementById('snack4a').innerHTML += `Punti: ${teams[i].puntiFatti}<br>`;
+  document.getElementById('snack4a').innerHTML += `Falli Subiti: ${teams[i].falliSubiti}<br>`;
 }
 
 
@@ -43,7 +43,7 @@ for(let i = 0; i < teams.length; i++){
 
   document.getElementById('snack4b').innerHTML += '<h2>Squadra ' + (i+1) + '</h2>';
 
-  for(key in teams[i]){
-    document.getElementById('snack4b').innerHTML += key + ': ' + teams[i][key] + '<br>';
-  }
+  document.getElementById('snack4b').innerHTML += `Nome: ${teams[i].nome}<br>`;
+  document.getElementById('snack4b').innerHTML += `Punti: ${teams[i].puntiFatti}<br>`;
+  document.getElementById('snack4b').innerHTML += `Falli Subiti: ${teams[i].falliSubiti}<br>`;
 }
