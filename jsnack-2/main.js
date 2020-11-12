@@ -6,6 +6,13 @@ da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 */
 
+/*
+jsnack 2 - Updated
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
+*/
+
 const bici = [
   {
     'nome': 'biciUno',
@@ -21,7 +28,7 @@ const bici = [
   },
 ];
 
-let biciLeggera = bici[0];
+let [biciLeggera] = bici;
 
 for(let i=0; i<bici.length; i++){
   if(biciLeggera.peso > bici[i].peso){
