@@ -30,11 +30,11 @@ const bici = [
 
 let [biciLeggera] = bici;
 
-for(let i=0; i<bici.length; i++){
-  if(biciLeggera.peso > bici[i].peso){
-    biciLeggera = bici[i];
+bici.forEach(function(element){
+  if(biciLeggera.peso > element.peso){
+    biciLeggera = element;
   }
-  console.log(biciLeggera);
-}
+});
+console.log(biciLeggera);
 
 document.write(`Nome Bici: ${biciLeggera.nome} <br>Peso: ${biciLeggera.peso}`);

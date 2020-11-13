@@ -23,16 +23,16 @@ const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 //creo un nuovo array aggiungendo ad ogni elemento la proprietà position che contiene una lettera casuale presa dalla variabile alphabet
 const newArray = arrayObj.map((element) => {
-  element.position = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-  return element
+  const newEl = {...element, position: alphabet.charAt(Math.floor(Math.random() * alphabet.length))};
+  return newEl;
 });
 
-console.log(newArray);
+console.log('startArr', arrayObj);
 
 const resultEl = document.getElementById('result');
 
 //stampo il nuovo array nell'HTML
-arrayObj.forEach((element, index) => {
+newArray.forEach((element, index) => {
   resultEl.innerHTML += `
   <h2>Object ${index}</h2>
   <p>
@@ -41,5 +41,7 @@ arrayObj.forEach((element, index) => {
     Colore: ${element.color}<br>
     Posizione: ${element.position}<br>
   </p>
-  `
+  `;
 });
+
+console.log('newArray', newArray);
