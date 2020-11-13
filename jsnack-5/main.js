@@ -18,6 +18,10 @@ for (let i = 0; i < 2; i++){
 
 console.log(userNum);
 
+userNum.sort();
+
+console.log(userNum);
+
 //creo un array con i valori di myArray che hanno la posizione compresa tra i due numeri inseriti dall’utente
 const filteredArray = myArray.slice(userNum[0], userNum[1]);
 
